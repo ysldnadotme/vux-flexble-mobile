@@ -1,0 +1,18 @@
+/**
+ * 设置api请求的baseURL
+ */
+
+const configs = {
+  // 请求协议
+  'protocol': 'http',
+  // 请求域名
+  'host': 'yapi.qniao.3ncto.com.cn',
+  // 基础路径
+  'basePath': '/mock/9'
+}
+
+export default {
+  baseURL: configs.protocol + '://' + configs.host + configs.basePath,
+  // baseURL: '',
+  isDev: false
+}

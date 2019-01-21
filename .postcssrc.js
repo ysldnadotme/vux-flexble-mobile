@@ -1,0 +1,34 @@
+// https://github.com/michael-ciniawsky/postcss-load-config
+
+module.exports = {
+  plugins: {
+    // to edit target browsers: use "browserslist" field in package.json
+    'postcss-import': {},
+    autoprefixer: {},
+    'postcss-aspect-ratio-mini': {},
+    /* 'postcss-px-to-viewport-lagou': {
+      viewportWidth: 750, // 视窗的宽度，对应的是我们设计稿的宽度，一般是750
+      //   viewportHeight: 1334, // 视窗的高度，根据750设备的宽度来指定，一般指定1334，也可以不配置
+      unitPrecision: 3, // 指定`px`转换为视窗单位值的小数位数
+      viewportUnit: 'vw', //指定需要转换成的视窗单位，建议使用vw
+      propertyBlacklist: ['font'], // 指定不转换为视窗单位的属性，可以自定义，可以无限添加,建议定义一至两个通用的类名
+      selectorBlackList: ['.ignore', 'vux-', 'weui', 'dp-', 'scroller-'], // 指定不转换为视窗单位的类，可以自定义，可以无限添加,建议定义一至两个通用的类名
+      LibraryUI: ['vux'], // 使用的第三方ui库
+      libraryRoot: 'node_modules', // 使用的第三方ui库，目录
+      minPixelValue: 1, // 小于或等于`1px`不转换为视窗单位，你也可以设置为你想要的值
+      mediaQuery: false // 允许在媒体查询中转换`px`
+    } */
+    'postcss-plugin-px2rem': {
+      rootValue: 75,
+      unitPrecision: 5,
+      propWhiteList: [],
+      propBlackList: ['font-size'],
+      exclude: false,
+      selectorBlackList: ['.ignore', 'vux-', 'weui', 'dp-', 'scroller-'],
+      ignoreIdentifier: false,
+      replace: true,
+      mediaQuery: false,
+      minPixelValue: 2
+    }
+  }
+}

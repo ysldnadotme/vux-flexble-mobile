@@ -1,0 +1,30 @@
+/**
+* 元素容器宽高比 (from: https://www.w3cplus.com/mobile/vw-layout-in-vue.html)
+* 例如生成 188:246（188是容器宽度，246是容器高度）这样的比例容器
+* [w-188-246] { 
+*   aspect-ratio: '188:246';
+* }
+*
+* <div aspectratio w-188-246>
+*   <div aspectratio-content></div>
+* </div>
+*/
+[aspectratio] {
+  position: relative;
+}
+[aspectratio]::before {
+  content: '';
+  display: block;
+  width: 1px;
+  margin-left: -1px;
+  height: 0;
+}
+[aspectratio-content] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}

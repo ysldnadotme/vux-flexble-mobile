@@ -1,4 +1,4 @@
-# vux-flexble-mobile
+# vux-flexible-mobile
 
 > A vue template with VUX & axios & iconfont & permission control & lint
 

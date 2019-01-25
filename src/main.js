@@ -12,6 +12,10 @@ import 'amfe-flexible'
 
 import * as directives from '@/directives' // global directives
 
+import Toast from '@/components/VuxToast/index' // 顶部 Toast
+
+Vue.use(Toast)
+
 FastClick.attach(document.body)
 
 // register global utility directives.

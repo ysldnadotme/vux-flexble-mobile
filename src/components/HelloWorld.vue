@@ -19,7 +19,7 @@
         </ul>
         <div aspectratio w-270-129>
             <div aspectratio-content>
-                <img src="https://www.baidu.com/img/bd_logo1.png" alt="">
+                <img @click="toast" src="https://www.baidu.com/img/bd_logo1.png" alt="">
             </div>
         </div>
     </div>
@@ -31,6 +31,11 @@ export default {
     data() {
         return {
             msg: 'Welcome to Your Vue.js App'
+        }
+    },
+    methods: {
+        toast() {
+            this.$vuxToast.show(this.msg)
         }
     }
 }
